@@ -1,0 +1,8 @@
+numpy
+scipy
+pandas
+pyyaml
+torch
+torchvision
+torchaudio
+pytorch-msssim

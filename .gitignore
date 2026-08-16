@@ -1,0 +1,15 @@
+# Ignore Python caches
+__pycache__/
+*.pyc
+
+# Ignore the massive training dataset (DO NOT upload to GitHub!)
+train/
+
+# Ignore all the intermediate checkpoint files (they are hundreds of MBs)
+# We only want to keep latest.pt and config.yaml
+checkpoints/*/checkpoint_*.pt
+v2_deeper_multiloss_checkpoints*/
+
+# Ignore Mac OS files
+.DS_Store
+*.pth
