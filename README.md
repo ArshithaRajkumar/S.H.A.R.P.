@@ -29,11 +29,11 @@ pip install -r requirements.txt
 ```
 
 ### Evaluation
-The inference script strictly adheres to the two-argument requirement:
+The inference script strictly adheres to the positional argument requirement:
 ```bash
-python evaluate.py --input_dir /path/to/NoisyLR --output_dir /path/to/output
+python run.py /path/to/NoisyLR /path/to/output
 ```
-The script will load `.npy` files from the input directory, perform the restoration, and save exact float32 `.npy` arrays to the output directory.
+The script will load `.npy` files from the input directory, perform the restoration, and save exact float32 `.npy` arrays clipped to `[0, 1]` without NaNs to the output directory.
 
 ## Defect Evaluation
 To run the Phase 6 defect evaluation pipeline (which injects synthetic defects into the ground truth and compares the recovery capability of the model), run:
